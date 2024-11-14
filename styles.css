@@ -1,0 +1,325 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #2e3b4e;
+  background-color: #f3f7f9;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b2a3d; /* Dark teal for contrast */
+  color: #f9f9f9;
+  padding: 1rem 2rem;
+}
+
+header .header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav a {
+  color: #f9f9f9;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Main Content Section */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #1e415b; /* Slightly lighter teal */
+  color: #f9f9f9;
+}
+
+.main-content .intro {
+  max-width: 50%;
+}
+
+.main-content h1 {
+  font-size: 2.5rem;
+}
+
+.main-content p {
+  font-size: 1rem;
+  color: #b0c3d0; /* Light desaturated blue */
+  margin-top: 0.5rem;
+}
+
+.main-content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #5b8aa0; /* Medium teal */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.image-placeholder {
+  width: 50%;
+  height: 250px;
+  background-color: #3a5468; /* Darker neutral */
+  color: #f3f7f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Information Section */
+.info-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1b2a3d;
+}
+
+.info-boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.info-box {
+  text-align: center;
+  padding: 20px;
+  background-color: #dae5e8; /* Light neutral */
+  border-radius: 8px;
+  width: calc(25% - 20px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling - Full Fit */
+.info-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f3f7f9; /* Background behind image */
+}
+
+/* Quote Section */
+.quote-section {
+  background: linear-gradient(135deg, #89c0d1 0%, #1e415b 100%); /* Gradient blend */
+  color: #333;
+  padding: 3rem;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 2rem auto;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote-section blockquote {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.quote-section cite {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.quote-section:before {
+  content: "“";
+  font-size: 4rem;
+  color: #ffffff99;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  background: #3a5468;
+  color: white;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.cta-section p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.cta-section button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  background-color: #5b8aa0;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-section button:hover {
+  background-color: #89c0d1;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background-color: #1b2a3d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .main-content .intro {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 200px;
+  }
+
+  .info-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-box {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section {
+    padding: 2rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  header .header-logo {
+    font-size: 1.2rem;
+  }
+
+  header nav a {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .main-content h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .main-content p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .cta-section p {
+    font-size: 1.2rem;
+  }
+
+  .cta-section button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  .cta-section {
+    padding: 1.5rem;
+  }
+
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .cta-section button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+/* Ensure image fits correctly in the main-content section */
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adjusts the image to fill the container proportionally without stretching */
+  border-radius: 10px; /* Optional: Adds a rounded effect to soften edges */
+}
